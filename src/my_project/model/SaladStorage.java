@@ -2,9 +2,9 @@ package my_project.model;
 
 public class SaladStorage {
 
-    private double abundance;
-    private int numberKit;
-    private double abundancePrice;
+    private double abundance = 100;
+    private int numberKit = 10; //anzahl muss angepasst werden
+    private double abundancePrice = 10;
 
     public SaladStorage(){
 
@@ -32,5 +32,17 @@ public class SaladStorage {
 
     public void setAbundancePrice(double abundancePrice){
         this.abundancePrice = abundancePrice;
+    }
+
+    public void createSalad(int saladType){
+        numberKit--;
+        Salad s = new Salad(saladType);
+        /* Dafür brauchen wir zugriff auf Geld
+        Geld++;
+        if(numberKit == 0){
+        numberKit = 10;
+        Geld = Geld - 10;
+        }
+        */
     }
 }

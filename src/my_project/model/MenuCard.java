@@ -4,7 +4,7 @@ public abstract class MenuCard {
 
     protected int price;
     protected boolean orderReady;
-    protected String ingredians;
+    protected String[] ingredians;
 
     public MenuCard(){
         this.price = price;
@@ -28,11 +28,11 @@ public abstract class MenuCard {
         this.orderReady = orderReady;
     }
 
-    public String getIngredians(){
-        return ingredians;
+    public void setIngredians(String[] ingredians) {
+        this.ingredians = ingredians;
     }
 
-    public void setIngredians(String ingredians) {
-        this.ingredians = ingredians;
+    public String[] getIngredians() {
+        return ingredians;
     }
 }
